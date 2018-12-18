@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
     else {
         res.writeHead(404, { 'Content-Type': 'text/html' });// Outputting HTML
         var html = fs.readFileSync(__dirname + '/index.html', 'utf8') //Store content of file to html var
-        html = html.replace('{Message}', `404 - Page not found on '${req.url}'`);
+        html = html.replace('{Message}', `404 Error- Page not found on '${req.url}'`);
         res.end(html);
 
     }
